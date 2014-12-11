@@ -1,0 +1,197 @@
+/*****************************************************************************
+  final-project_v2
+******************************************************************************/
+
+
+@import '../../bower_components/bourbon/dist/_bourbon.scss';
+
+$visual-grid: none;
+$visual-grid-color: tomato;
+
+@import '../../bower_components/neat/app/assets/stylesheets/_neat.scss';
+
+
+
+
+
+/*****************************************************************************
+  Base Styles
+******************************************************************************/
+
+html {
+	display: block;
+	font-size: 12px;
+	box-sizing:border-box;
+	font-family: 'Open Sans', sans-serif;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+img {
+	max-width: 100%;
+}
+
+
+/*****************************************************************************
+  Layout Styles
+******************************************************************************/
+
+.list-unstyled {
+	padding: 0;
+	margin: 0;
+	list-style-type: none; 
+}
+
+.intro-page, 
+.site-menu {
+	margin: 0;
+	padding: 0;
+
+}
+
+ul.menu li {
+	display: inline;
+	width: auto;
+	padding: 0.2em 0.4em;
+	float: right;
+	font-size: 0.8em;
+}
+
+.splash-pic {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	line-height: 0;
+}
+
+img.splash-pic {
+	vertical-align: top;
+	display: block;
+	border: 0;
+}
+.splash-pic > h1 {
+	font-size: 7.2vw;
+	color: white;
+	bottom: 3.125em; 
+	margin: 0 auto; 
+	position: relative;
+	padding-left: 5px;
+	width: 100%; 
+ 
+}
+
+.splash-pic > h2 {
+	font-size: 4vw;
+	color: white;
+	bottom: 2em; 
+	margin: 0 auto; 
+	position: absolute; 
+	padding-left: 5px;
+	line-height: 4.5vw;
+
+}
+
+header {
+	text-align: center;
+	font-size: 1.4em;
+	padding-bottom: 1em;
+}
+
+.about {
+
+	@include span-columns(12);
+	padding: 1em;
+	font-size: 1.1em;
+}
+
+.about > p {
+	text-align: center;
+	font-size: 0.8em;
+	margin: 0em;
+
+}
+
+.set-pref {
+	@include span-columns(12);
+}
+
+.food-families {
+	padding: 0;
+	margin: 0;
+}
+
+.food-family {
+	height: 86px;
+	padding: 0;
+	top: 0;
+	width:100%; 
+	height:100%;
+	position: relative;
+}
+
+
+
+.food-family > h2 {
+	font-size: 2.1em;
+	background-color: rgba(255, 255, 255, 0.5);
+	text-align: center;
+	width: 100%; 
+	top: 25%; 
+	margin: 0 auto; 
+	position: absolute; 
+}
+
+
+@media screen and (min-width: 570px) and (max-width: 800px) {
+	
+	.food-family {
+		@include span-columns(6);
+		@include omega(4n);
+	}
+
+	.food-family:nth-child(2n) {
+		margin-right: 0;
+
+	}
+	
+}
+
+@media screen and (min-width: 801px) and (max-width: 900px) {
+
+	.food-family {
+		@include span-columns(4);
+
+	}
+	.food-family:nth-child(3n) {
+		margin-right: 0;
+	}
+
+}
+
+@media screen and (min-width: 901px) and (max-width: 2800px) {
+
+	.food-family {
+		@include span-columns(3);
+
+	}
+	.food-family:nth-child(4n) {
+		margin-right: 0;
+	}
+
+}
+/*****************************************************************************
+  Module Styles
+
+  	@include span-columns(8);
+	@include shift(2);
+******************************************************************************/
+
+
+
+
