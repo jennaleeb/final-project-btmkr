@@ -46,36 +46,48 @@ ul.menu li {
   font-size: 0.8em; }
 
 .splash-pic {
-  background: url(https://dl.dropboxusercontent.com/u/19014071/bitmaker/Final%20Project%20Photo%20Ideas/friends_picnic2_bw.jpg) no-repeat;
-  min-height: 200px;
+  background: url(https://dl.dropboxusercontent.com/u/19014071/bitmaker/Final%20Project%20Photo%20Ideas/friends_picnic4.jpg) no-repeat;
+  min-height: 33vw;
   width: 100%;
   background-size: 100%;
   margin: 0;
   padding: 0;
-  line-height: 0; }
+  line-height: 0;
+  display: inline-block;
+  z-index: -1; }
 
 img.splash-pic {
   vertical-align: top;
   display: block;
   border: 0; }
 
-.splash-pic > h1 {
-  font-size: 7.2vw;
+.splash-pic h1 {
+  font-size: 4.2vw;
   color: white;
-  bottom: 3.125em;
+  bottom: -4.875em;
+  text-align: center;
   margin: 0 auto;
   position: relative;
   padding-left: 5px;
-  width: 100%; }
+  width: 100%;
+  background-color: black;
+  z-index: 1;
+  font-weight: lighter; }
 
-.splash-pic > h2 {
-  font-size: 4vw;
+#logo {
+  top: 36px;
+  font-size: 2em; }
+
+.splash-pic h2 {
+  font-size: 2vw;
   color: white;
-  bottom: -4.875em;
-  margin: 0 auto;
-  position: absolute;
+  margin: 0.1em auto;
+  position: relative;
   padding-left: 5px;
-  line-height: 4.5vw; }
+  text-align: center;
+  top: 12.5em;
+  background-color: red;
+  z-index: 100000; }
 
 header {
   text-align: center;
