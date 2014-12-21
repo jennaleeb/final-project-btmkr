@@ -304,6 +304,10 @@ header {
 		margin-right: 0;
 
 	}
+
+	.site-menu li {
+		font-size: 1em;
+	}
 	
 }
 
@@ -327,6 +331,11 @@ header {
 	}
 	.food-family:nth-child(4n) {
 		margin-right: 0;
+	}
+
+	.set-pref {
+		width: 98%;
+		margin: 0 1em;
 	}
 
 }
