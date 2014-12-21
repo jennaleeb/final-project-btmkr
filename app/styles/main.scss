@@ -5,7 +5,7 @@
 
 @import '../../bower_components/bourbon/dist/_bourbon.scss';
 
-$visual-grid: none;
+$visual-grid: yes;
 $visual-grid-color: tomato;
 
 @import '../../bower_components/neat/app/assets/stylesheets/_neat.scss';
@@ -49,6 +49,7 @@ img {
 	list-style-type: none; 
 }
 
+/*Site menu styles*/
 .intro-page, 
 .site-menu {
 	margin: 0;
@@ -74,8 +75,10 @@ img {
 	font-weight: lighter;
 }
 
+/*Main splash picture and heading styles*/
+
 .splash-pic {
-	background: url(https://dl.dropboxusercontent.com/u/19014071/bitmaker/Final%20Project%20Photo%20Ideas/friends_picnic4.jpg) no-repeat;
+	background: url(../images/friends_picnic4.jpg);
 	background-attachment: fixed;
 	min-height: 33vw;
 	width: 100%;
@@ -108,8 +111,6 @@ img.splash-pic {
 	position: relative;
 	width: 100%; 
 	font-weight: lighter;
-
- 
 }
 
 
@@ -121,8 +122,32 @@ img.splash-pic {
 	position: relative; 
 	text-align: center;
 	top: 21.5vw;
+}
+
+.intro {
+	background-color: black;
+	height: 5.5vw;
+	margin-top: -16px;
+}
+
+.intro h3 {
+	font-size: 2vw;
+	color: white;
+	margin: 0 auto; 
+	position: relative; 
+	text-align: center;
+	background-color: rgba(255, 99, 71, 1);
+	border-radius: 3px;
+	display: inline-block;
+	padding: 0.5em 0.3em;
+	margin-top: 3%;
+	width: 18%;
+	margin-left: 41.3%;
 
 }
+
+
+/*Content*/
 
 header {
 	text-align: center;
@@ -144,6 +169,8 @@ header {
 	margin: 0em;
 
 }
+
+/*Section where user sets preferences*/
 
 .set-pref {
 	@include span-columns(12);
@@ -176,17 +203,19 @@ header {
 	position: absolute; 
 }
 
+/*Images for food families*/
+
 #vegetable {
-	background: url(../images/vegetables_1.jpg);
+	background: url(../images/vegetables.jpg);
 	height: 96px;
-	background-position: center;
+	background-position-y: -23px;
 	background-size: 100%;
 }
 
 #meat-poultry {
 	background: url(../images/chicken.jpg);
 	height: 96px;
-	background-position: center;
+	background-position-y:-114px;
 	background-size: 100%;
 }
 
@@ -233,6 +262,8 @@ header {
 	background-size: 100%;
 }
 
+/*Styles used for everything bigger than mobile*/
+
 @media screen and (min-width: 570px) {
 
 	#logo {
@@ -256,7 +287,7 @@ header {
 
 
 
-.splash-pic h2 {
+	.splash-pic h2 {
 	font-size: 2vw;
 	color: white;
 	margin: 0.1em auto; 
@@ -273,25 +304,26 @@ header {
 	float: right;
 	}
 
-.site-menu ul {
+	.site-menu ul {
 	padding-top: 1em;
 	padding-right: 1em;
 
 	}
 
-.site-menu li {
+	.site-menu li {
 	display: inline;
 	width: auto;
 	padding: 1em 0.4em;
 	font-size: 1.5em;
 	}
 
-.site-menu li a{
+	.site-menu li a{
 	color: white;
 	text-decoration: none;
 	font-weight: lighter;
 	}
 }
+
 
 @media screen and (min-width: 570px) and (max-width: 800px) {
 	
@@ -321,6 +353,7 @@ header {
 		margin-right: 0;
 	}
 
+
 }
 
 @media screen and (min-width: 901px) and (max-width: 2800px) {
@@ -337,6 +370,7 @@ header {
 		width: 98%;
 		margin: 0 1em;
 	}
+
 
 }
 /*****************************************************************************
