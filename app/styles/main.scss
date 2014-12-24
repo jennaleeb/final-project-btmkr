@@ -5,7 +5,7 @@
 
 @import '../../bower_components/bourbon/dist/_bourbon.scss';
 
-$visual-grid: yes;
+$visual-grid: none;
 $visual-grid-color: tomato;
 
 @import '../../bower_components/neat/app/assets/stylesheets/_neat.scss';
@@ -126,25 +126,31 @@ img.splash-pic {
 
 .intro {
 	background-color: black;
-	height: 5.5vw;
+	height: 10vw;
 	margin-top: -16px;
 }
 
-.intro h3 {
+.intro a {
 	font-size: 2vw;
 	color: white;
 	margin: 0 auto; 
 	position: relative; 
 	text-align: center;
-	background-color: rgba(255, 99, 71, 1);
+	background-color: rgba(255, 99, 71, 0.8);
 	border-radius: 3px;
 	display: inline-block;
 	padding: 0.5em 0.3em;
 	margin-top: 3%;
 	width: 18%;
 	margin-left: 41.3%;
+	text-decoration: none;
 
 }
+
+.intro a:hover {
+	background-color: rgba(255, 99, 71, 1);
+}
+
 
 
 /*Content*/
@@ -161,12 +167,13 @@ header {
 	@include span-columns(12);
 	padding: 1em;
 	font-size: 1.1em;
+	margin-top: 1em;
 }
 
-.about > p {
+.about p {
 	text-align: center;
 	font-size: 0.8em;
-	margin: 0em;
+	margin: 0 2vw;
 
 }
 
@@ -201,6 +208,7 @@ header {
 	top: 32%; 
 	margin: 0 auto; 
 	position: absolute; 
+	font-weight: 300;
 }
 
 /*Images for food families*/
@@ -220,7 +228,7 @@ header {
 }
 
 #fruit {
-	background: url(../images/cherries_1.jpg);
+	background: url(../images/cherries.jpg);
 	height: 96px;
 	background-position: center;
 	background-size: 100%;
