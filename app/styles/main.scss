@@ -211,6 +211,11 @@ header {
 	font-weight: 300;
 }
 
+.food-specific {
+	display: inline-block;
+	margin-left: 1em;
+}
+
 /*Images for food families*/
 
 #vegetable {
@@ -381,11 +386,9 @@ header {
 
 
 }
+
 /*****************************************************************************
   Module Styles
-
-  	@include span-columns(8);
-	@include shift(2);
 ******************************************************************************/
 
 
