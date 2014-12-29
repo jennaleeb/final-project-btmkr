@@ -116,27 +116,31 @@ img.splash-pic {
 .intro a:hover {
   background-color: tomato; }
 
-/*Content*/
+/*Intro Content*/
 header {
   text-align: center;
   font-size: 1.4em;
-  padding-bottom: 1em; }
+  padding-bottom: 0.6em; }
 
-.about {
+.content-block {
   float: left;
   display: block;
   margin-right: 2.3576515979%;
   width: 100%;
-  padding: 1em;
-  font-size: 1.1em;
-  margin-top: 1em; }
-  .about:last-child {
+  font-size: 1em; }
+  .content-block:last-child {
     margin-right: 0; }
 
-.about p {
+.content-block p {
   text-align: center;
-  font-size: 0.8em;
+  font-size: 1em;
   margin: 0 2vw; }
+
+.content-block img {
+  height: 92px;
+  display: block;
+  margin: 0 auto;
+  opacity: 0.6; }
 
 /*Section where user sets preferences*/
 .set-pref {
@@ -272,6 +276,11 @@ header {
  }
 
 @media screen and (min-width: 570px) and (max-width: 800px) {
+  .content-block {
+    font-size: 1.1em;
+    width: 70%;
+    margin-left: 15%; }
+
   .food-family {
     float: left;
     display: block;
@@ -290,6 +299,19 @@ header {
  }
 
 @media screen and (min-width: 801px) and (max-width: 900px) {
+  .about {
+    margin: 0 auto;
+    display: block; }
+
+  .content-block {
+    float: left;
+    display: block;
+    margin-right: 2.3576515979%;
+    width: 31.7615656014%;
+    margin-right: 0; }
+    .content-block:last-child {
+      margin-right: 0; }
+
   .food-family {
     float: left;
     display: block;
@@ -303,6 +325,16 @@ header {
  }
 
 @media screen and (min-width: 901px) and (max-width: 2800px) {
+  .content-block {
+    font-size: 1.2em;
+    float: left;
+    display: block;
+    margin-right: 2.3576515979%;
+    width: 31.7615656014%;
+    margin-right: 0; }
+    .content-block:last-child {
+      margin-right: 0; }
+
   .food-family {
     float: left;
     display: block;
