@@ -49,6 +49,7 @@
       </div>
 
       <div class="intro">
+        <a href="#">LEARN MORE</a>
         <a href="#">GET STARTED</a>
       </div>
 
@@ -83,22 +84,41 @@
       </div>
     </div>
     
+    <div class="">
+      <header>WHAT CAN'T YOU EAT?</header>
+      <div class="">
+        <form class="add-food-widget">
+          <input type="text" name="food_adder" id="food_adder" placeholder="ENTER FOOD ITEM">
+          <input type="button" value="ADD TO LIST">
+        </form>
+      </div>
+      
 
+      <div class="cant-eat-container">
+        <h3 class="list-of-items">
+          Cherries
+          <span class="delete">X</span>
+        </h3>
+
+      </div>
+
+    </div>
     
     
     
 
     <div class="set-pref">
 
-      <header>Set Preferences</header>
+      <header>GROCERY LIST</header>
 
-      <ul class="food-families">
+<!--       Hover over each box and have a pop up bubble that explains about different allergies/sensitivities? -->
+
+      <ul id="food-families">
 
         <li class="food-family list-unstyled" id="vegetable">
-          <h2>VEGETABLES</h2>          
-        </li>
+          <h2>VEGETABLES</h2>
 
-          <div class="food-specific">
+<!--           <div class="food-specific">
             <form>
               <ul class = "list-unstyled">
                 <li><input type="checkbox" checked="checked">Eggplant</li>
@@ -107,11 +127,29 @@
               </ul>
               
             </form>
-          </div>
+          </div>    -->       
+        </li>
+
+
+
+
 
         <li class="food-family list-unstyled" id="meat-poultry">
           <h2>MEAT &amp; POULTRY</h2>
+
+<!--           <div class="food-specific">
+            <form>
+              <ul class = "list-unstyled">
+                <li><input type="checkbox" checked="checked">Chicken</li>
+                <li><input type="checkbox" checked="checked">Beef</li>
+                <li><input type="checkbox" checked="checked">Bison</li>
+              </ul>
+              
+            </form>
+          </div>  -->
         </li>
+
+
 
         <li class="food-family list-unstyled" id="grains">
           <h2>GRAINS</h2>
@@ -140,18 +178,16 @@
       </ul>
      
     </div>
-      
-<!--     <div class="friends">
-      <header>Friends</header>
-      <ul class="friend-list">
-        <li id="friend-1"></li>
-      </ul> -->
+
+
+
 
 
     <!-- build:js scripts/main.js -->
     <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
     <script src="../bower_components/jquery/dist/jquery.js"></script>
     <script src="scripts/main.js"></script>
+
 
     <!-- endbuild -->
   </body>

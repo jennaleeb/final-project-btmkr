@@ -21,7 +21,9 @@ html {
   font-family: 'Open Sans', sans-serif; }
 
 *, *:before, *:after {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box; }
 
 img {
   max-width: 100%; }
@@ -38,7 +40,8 @@ img {
 .intro-page, .site-menu {
   margin: 0;
   padding: 0;
-  float: right; }
+  float: right;
+  background-color: rgba(0, 0, 0, 0.1); }
 
 .site-menu ul {
   padding-top: 0.1em; }
@@ -53,6 +56,9 @@ img {
   color: white;
   text-decoration: none;
   font-weight: lighter; }
+
+.site-menu li a:hover {
+  text-decoration: underline; }
 
 /*Main splash picture and heading styles*/
 .splash-pic {
@@ -96,7 +102,8 @@ img.splash-pic {
 .intro {
   background-color: black;
   height: 10vw;
-  margin-top: -16px; }
+  margin-top: -16px;
+  text-align: center; }
 
 .intro a {
   font-size: 2vw;
@@ -104,14 +111,19 @@ img.splash-pic {
   margin: 0 auto;
   position: relative;
   text-align: center;
-  background-color: rgba(255, 99, 71, 0.8);
+  background-color: rgba(255, 99, 71, 0.7);
   border-radius: 3px;
   display: inline-block;
   padding: 0.5em 0.3em;
   margin-top: 3%;
   width: 18%;
-  margin-left: 41.3%;
-  text-decoration: none; }
+  text-decoration: none;
+  margin-left: 8px; }
+
+.intro a:first-child {
+  background-color: black;
+  border: solid 1px tomato;
+  padding: 0.45em 0.2em; }
 
 .intro a:hover {
   background-color: tomato; }
@@ -120,14 +132,19 @@ img.splash-pic {
 header {
   text-align: center;
   font-size: 1.4em;
-  padding-bottom: 0.6em; }
+  padding: 0.6em 0; }
+
+.about {
+  background-color: white;
+  overflow: hidden; }
 
 .content-block {
   float: left;
   display: block;
   margin-right: 2.3576515979%;
   width: 100%;
-  font-size: 1em; }
+  font-size: 1em;
+  margin-bottom: 1em; }
   .content-block:last-child {
     margin-right: 0; }
 
@@ -142,7 +159,38 @@ header {
   margin: 0 auto;
   opacity: 0.6; }
 
-/*Section where user sets preferences*/
+.add-food-widget {
+  display: block;
+  text-align: center;
+  padding: 1em; }
+
+.cant-eat-container {
+  display: block;
+  background-color: none;
+  height: 8em; }
+
+.list-of-items {
+  display: block;
+  width: 50%;
+  background-color: white;
+  border: solid 1px black;
+  border-radius: 5px;
+  padding: 2px 4px;
+  margin: 0.3em auto;
+  text-align: center;
+  overflow: hidden; }
+
+.delete {
+  cursor: pointer;
+  display: inline-block;
+  float: left;
+  height: 20px;
+  width: 20px;
+  border: solid 1px;
+  border-radius: 50%;
+  text-align: center;
+  font-weight: bolder; }
+
 .set-pref {
   float: left;
   display: block;
@@ -151,7 +199,7 @@ header {
   .set-pref:last-child {
     margin-right: 0; }
 
-.food-families {
+#food-families {
   padding: 0;
   margin: 0; }
 
@@ -175,8 +223,9 @@ header {
   font-weight: 300; }
 
 .food-specific {
-  display: inline-block;
-  margin-left: 1em; }
+  display: block;
+  background-color: white;
+  padding: 1em; }
 
 /*Images for food families*/
 #vegetable {
@@ -228,6 +277,9 @@ header {
   background-position: center;
   background-size: 100%; }
 
+.my-list {
+  text-align: center; }
+
 /*Styles used for everything bigger than mobile*/
 @media screen and (min-width: 570px) {
   #logo {
@@ -273,6 +325,16 @@ header {
     color: white;
     text-decoration: none;
     font-weight: lighter; }
+
+  .about {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+            justify-content: center; }
+
+  #food-families {
+    padding: 0;
+    margin: 0 1em; }
  }
 
 @media screen and (min-width: 570px) and (max-width: 800px) {
@@ -346,9 +408,6 @@ header {
   .food-family:nth-child(4n) {
     margin-right: 0; }
 
-  .set-pref {
-    width: 98%;
-    margin: 0 1em; }
  }
 
 /*****************************************************************************

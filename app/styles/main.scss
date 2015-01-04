@@ -30,6 +30,8 @@ html {
 *:before,
 *:after {
 	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
 }
 
 img {
@@ -55,6 +57,7 @@ img {
 	margin: 0;
 	padding: 0;
 	float: right;
+	background-color: rgba(0,0,0,0.1);
 }
 
 .site-menu ul {
@@ -73,6 +76,10 @@ img {
 	color: white;
 	text-decoration: none;
 	font-weight: lighter;
+}
+
+.site-menu li a:hover {
+	text-decoration: underline;
 }
 
 /*Main splash picture and heading styles*/
@@ -128,6 +135,7 @@ img.splash-pic {
 	background-color: black;
 	height: 10vw;
 	margin-top: -16px;
+	text-align: center;
 }
 
 .intro a {
@@ -136,15 +144,22 @@ img.splash-pic {
 	margin: 0 auto; 
 	position: relative; 
 	text-align: center;
-	background-color: rgba(255, 99, 71, 0.8);
+	background-color: rgba(255, 99, 71, 0.7);
 	border-radius: 3px;
 	display: inline-block;
 	padding: 0.5em 0.3em;
 	margin-top: 3%;
 	width: 18%;
-	margin-left: 41.3%;
 	text-decoration: none;
+	margin-left: 8px;
 
+
+}
+
+.intro a:first-child {
+	background-color: black;
+	border: solid 1px tomato;
+	padding: 0.45em 0.2em;
 }
 
 .intro a:hover {
@@ -158,13 +173,21 @@ img.splash-pic {
 header {
 	text-align: center;
 	font-size: 1.4em;
-	padding-bottom: 0.6em;
+	padding: 0.6em 0;
 
 }
 
+.about {
+	background-color: white;
+	overflow:hidden;
+	
+
+}
 .content-block {
 	@include span-columns(12);
 	font-size: 1em;
+	margin-bottom: 1em;
+
 }
 
 .content-block p {
@@ -181,13 +204,49 @@ header {
 	opacity: 0.6;
 }
 
-/*Section where user sets preferences*/
+.add-food-widget {
+	display: block;
+	text-align: center;
+	padding: 1em;
+}
+.cant-eat-container {
+	display: block;
+	background-color: none;
+	height: 8em;
+}
+
+.list-of-items {
+	display: block;
+	width: 50%;
+	background-color: white;
+	border: solid 1px black;
+	border-radius: 5px;
+	padding: 2px 4px;
+	margin: 0.3em auto;
+	text-align: center;
+	overflow:hidden;
+}
+
+
+.delete {
+	cursor: pointer;
+	display: inline-block;
+	float: left;
+	height: 20px;
+	width: 20px;
+	border: solid 1px;
+	border-radius: 50%;
+	text-align: center;
+	font-weight: bolder;
+
+}
+
 
 .set-pref {
 	@include span-columns(12);
 }
 
-.food-families {
+#food-families {
 	padding: 0;
 	margin: 0;
 }
@@ -216,8 +275,10 @@ header {
 }
 
 .food-specific {
-	display: inline-block;
-	margin-left: 1em;
+	display: block;
+	background-color: white;
+	padding: 1em;
+
 }
 
 /*Images for food families*/
@@ -277,6 +338,10 @@ header {
 	height: 96px;
 	background-position: center;
 	background-size: 100%;
+}
+
+.my-list {
+	text-align: center;
 }
 
 /*Styles used for everything bigger than mobile*/
@@ -339,6 +404,19 @@ header {
 	text-decoration: none;
 	font-weight: lighter;
 	}
+
+	.about {
+		display: flex;
+		justify-content: center;
+	}
+
+	#food-families {
+		padding: 0;
+		margin: 0 1em;
+}
+
+
+	
 }
 
 
@@ -362,6 +440,8 @@ header {
 	.site-menu li {
 		font-size: 1em;
 	}
+
+
 	
 }
 
@@ -396,14 +476,16 @@ header {
 	.food-family {
 		@include span-columns(3);
 
+
 	}
 	.food-family:nth-child(4n) {
 		margin-right: 0;
 	}
 
+
+
 	.set-pref {
-		width: 98%;
-		margin: 0 1em;
+		
 	}
 
 
