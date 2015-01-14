@@ -20,6 +20,7 @@
     	
 	});
 
+
 // Use enter key as button click
 	$('.food_adder').keypress(function (e) {
  		var key = e.which;
@@ -31,23 +32,23 @@
 	});  
 
 // Change colour of food item when click ~ or !
-	$('.dont-like').on('click', function() {
+	
+	
+	$('.cant-eat-container').on('click', '.dont-like', function() {
 		$(this).closest('.list-of-items').toggleClass('dont-like-background');
 	});
 
-	$('.cant-eat').on('click', function() {
+	$('.cant-eat-container').on('click', '.cant-eat', function() {
 		$(this).closest('.list-of-items').toggleClass('cant-eat-background');
-	
-
-
 	});
+
 	
 
- //  	$(".food-specific").hide();
-	// $(".food-family").click(function() {
-	// 	$(".food-specific").toggle();
-	// });
+  	$(".food-specific").hide();
+	$(".food-family").click(function() {
+		$(".food-specific").toggle();
+	});
 
-	// $("input").prop("checked")
+	$("input").prop("checked")
 
 })(jQuery);
