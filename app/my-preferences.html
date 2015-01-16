@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0;">
+    <title>My Preferences</title>
+
+    <!-- build:css styles/vendor.css -->
+    <link rel="stylesheet" type="text/css" href="../bower_components/normalize-css/normalize.css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+<!--     <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'> -->
+
+    
+    <!-- endbuild -->
+
+    <link rel="stylesheet" href="styles/main.css">
+
+    
+  </head>
+
+  <body>
+    <div class="pref-page">
+
+      <nav class="site-menu">
+        <ul class="list-unstyled">
+          <li><a href="index.html">About</a></li>
+          <li><a href="my-preferences.html">Set Preferences</a></li>
+          <li><a href="#friends">Friends</a></li>
+          <li><a href="#">Picknic</a></li>
+          <li><a href="#">Log in</a></li>
+        </ul>
+      </nav>
+
+      <div class="section cant-eat-section">
+      <header>WHAT CAN'T YOU EAT?</header>
+
+      <div class="">
+        <form class="add-food-widget">
+          <input type="text" name="food_adder" class="food_adder" placeholder="ENTER FOOD ITEM">
+          <input type="button" value="ADD TO LIST">
+        </form>
+      </div>
+      
+
+      <div >
+        <ul class="cant-eat-container">
+          <li class="list-of-items">I'm an Example Food Item!
+            <div class="delete remove-item">x</div>
+            <div class="delete dont-like">~</div>
+            <div class="delete cant-eat">!</div>
+
+          </li>
+
+        </ul>
+
+      </div>
+      <input type="button" value="Save my preferences" id="save-pref">
+    </div>
+    </div>
+
+
+
+
+
+
+    <!-- build:js scripts/main.js -->
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+    <script src="../bower_components/typeahead.js/dist/typeahead.jquery.min.js"></script>
+    <script src="../bower_components/jquery/dist/jquery.js"></script>
+    <script src="scripts/main.js"></script>
+
+
+    <!-- endbuild -->
+  </body>
+</html>

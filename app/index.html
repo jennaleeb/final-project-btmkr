@@ -21,14 +21,12 @@
   <body>
     <div class="intro-page">
 
-      <div class="site-branding">
-      </div>
 
       <nav class="site-menu">
         <ul class="list-unstyled">
-          <li><a href="#">About</a></li>
-          <li><a href="#">Set Preferences</a></li>
-          <li><a href="#">Friends</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="my-preferences.html">Set Preferences</a></li>
+          <li><a href="#friends">Friends</a></li>
           <li><a href="#">Picknic</a></li>
           <li><a href="#">Log in</a></li>
         </ul>
@@ -52,68 +50,64 @@
         <a href="#">LEARN MORE</a>
         <a href="#">GET STARTED</a>
       </div>
-
+    <a name="about"></a>
+    <div class="content-block" id="what-is-picnic">
+      <header>What is Picnic?</header>
+        <hr width="150">
+        <p>
+          Picnic is a social app that let's you set your dietary preferences and share them with your friends. As a host, it makes sure you have something for everyone. As a guest, dynamically update your status and let your host know what's on and off the table.
+        </p>
+        
+    </div>
 
     <div class="about">
+
       <div class="content-block">
         <img src="../images/graph-icon.png">
+        <hr width="110">
         <header>Background</header>
 
         <p>
-          Know someone with an allergy or intolerance? You’re not alone. The number of people living with food sensitivities has risen over 20% in the last 10 years.
+          The number of people living with food sensitivities has risen over 20% in the last 10 years.
         </p>
+
+
 
       </div>
         
       <div class="content-block">
         <img src="../images/paper-icon.png">
-        <header>The Idea</header>
+        <hr width="110">
+        <header>The Challenge</header>
 
         <p>
-          Finding a meal that works for everyone can be a challenge. 
+          Finding a meal to fit everyone's unique needs, that seem to be constantly changing! 
         </p>
 
       </div>
 
       <div class="content-block">
         <img src="../images/comment-icon.png">
+        <hr width="110">
         <header>How it Works</header>
 
         <p>
-          Picnic is a social app that let's you set your dietary preferences and share them with your friends. As a host, it makes sure you have something for everyone. As a guest, dynamically update your status and let your host know what's on and off the table.
+          Use Picnic to set up your personalized dietary profile share it with your friends and family.
         </p>
       </div>
     </div>
     
-    <div class="section cant-eat-section">
-      <header>WHAT CAN'T YOU EAT?</header>
-      <div class="">
-        <form class="add-food-widget">
-          <input type="text" name="food_adder" class="food_adder" placeholder="ENTER FOOD ITEM">
-          <input type="button" value="ADD TO LIST">
-        </form>
-      </div>
+    
+    
+    <a name="friends"></a>
+    <div class="intro">
+      <a class="">Ready?</a>
       
-
-      <div >
-        <ul class="cant-eat-container">
-          <li class="list-of-items">I'm an Example Food Item!
-            <div class="delete dont-like">~</div>
-            <div class="delete cant-eat">!</div>
-          </li>
-
-        </ul>
-
-      </div>
-
     </div>
-    
-    
-    
 
-    <div class="set-pref">
+    <div class="set-pref section">
 
-      <header>GROCERY LIST</header>
+      <header>HOVER OVER TO LEARN MORE ABOUT COMMON ALLERGIES AND SENSITIVITIES</header>
 
 <!--       Hover over each box and have a pop up bubble that explains about different allergies/sensitivities? -->
 
@@ -189,6 +183,7 @@
 
     <!-- build:js scripts/main.js -->
     <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+    <script src="../bower_components/typeahead.js/dist/typeahead.jquery.min.js"></script>
     <script src="../bower_components/jquery/dist/jquery.js"></script>
     <script src="scripts/main.js"></script>
 

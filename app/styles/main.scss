@@ -55,7 +55,7 @@ img {
 .intro-page, 
 .site-menu {
 	margin: 0;
-	padding: 0;
+	padding-bottom: 1em;
 	float: right;
 	background-color: rgba(0,0,0,0.1);
 }
@@ -172,7 +172,7 @@ img.splash-pic {
 
 header {
 	text-align: center;
-	font-size: 1.4em;
+	font-size: 1.7em;
 	padding: 0.6em 0;
 
 }
@@ -180,24 +180,41 @@ header {
 .about {
 	background-color: white;
 	overflow:hidden;
+	width: 100%;
+	padding-bottom: 3em;
 	
 
 }
-.content-block {
+
+#what-is-picnic {
 	@include span-columns(12);
+	display: block;
+	text-align: center;
+	background-color: white;
+	padding-top: 1em;
+	padding-left: 20%;
+	padding-right: 20%;
+	padding-bottom: 2em;
+	line-height: 1.6em;
+}
+
+
+.about .content-block {
 	font-size: 1em;
 	margin-bottom: 1em;
+	@include span-columns(4);
+	line-height: 1.6em;
 
 }
 
-.content-block p {
+.about .content-block p {
 	text-align: center;
-	font-size: 1em;
+	font-size: 1.1em;
 	margin: 0 2vw;
 
 }
 
-.content-block img {
+.about .content-block img {
 	height: 92px;
 	display: block;
 	margin: 0 auto;
@@ -207,15 +224,15 @@ header {
 /*Adding list of foods you can't eat*/
 
 .section {
-	overflow: hidden;
-	height: 100vh;
+	/*overflow: hidden;*/
 	border-top: solid 1px white;
 	border-bottom: solid 1px white;
 }
 
 .cant-eat-section {
-	height: 16em;
+	height: 40em;
 }
+
 
 .add-food-widget {
 	display: block;
@@ -224,13 +241,17 @@ header {
 }
 .cant-eat-container {
 	display: block;
-	background-color: none;
+	padding: 1em;
+	border-radius: 5px;
+	height: 100px;
+	width: 50%;
+	margin: 0 auto;
 }
 
 .list-of-items {
 	display: block;
-	width: 30%;
-	background-color: white;
+	width: 70%;
+	background-color: whitesmoke;
 	border: solid 1px black;
 	border-radius: 5px;
 	padding: 2px 4px;
@@ -384,6 +405,9 @@ header {
 	text-align: center;
 }
 
+
+
+
 /*Styles used for everything bigger than mobile*/
 
 @media screen and (min-width: 570px) {
@@ -422,13 +446,15 @@ header {
 
 	.site-menu {
 	margin: 0;
-	padding: 0;
-	float: right;
+	padding-bottom: 1em;
+	width: 100%;
+	display: block;
 	}
 
 	.site-menu ul {
 	padding-top: 1em;
 	padding-right: 1em;
+	float: right;
 
 	}
 
@@ -443,6 +469,7 @@ header {
 	color: white;
 	text-decoration: none;
 	font-weight: lighter;
+	
 	}
 
 	.about {
@@ -535,6 +562,18 @@ header {
   Module Styles
 ******************************************************************************/
 
+/*Preference page styles*/
 
+.pref-page {
+	background-color: bisque;
+}
 
+#save-pref {
+	background-color: tomato;
+	margin-left: 57%;
+	margin-top: 1em;
+	border: none;
+	border-radius: 15px;
+
+}
 
