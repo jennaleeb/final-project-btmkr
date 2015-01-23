@@ -1181,4 +1181,5 @@
             return this;
         };
     })();
+
 })(window.jQuery);
