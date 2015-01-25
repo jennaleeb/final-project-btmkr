@@ -203,11 +203,6 @@ header {
   position: absolute;
   font-weight: 300; }
 
-.food-specific {
-  display: block;
-  background-color: white;
-  padding: 1em; }
-
 /*Images for food families*/
 #vegetable {
   background: url(../images/vegetables.jpg);
@@ -262,9 +257,6 @@ header {
   text-align: center; }
 
 /*Preference page styles*/
-.pref-page .splash-pic {
-  min-height: 4vw; }
-
 .account {
   background-color: white;
   display: inline-block;
@@ -296,10 +288,13 @@ input:focus, textarea:focus {
 
 #save-pref {
   background-color: tomato;
-  margin-left: 57%;
+  margin-left: 52%;
   border: none;
   display: block;
-  margin: 1em auto; }
+  margin: 1em auto;
+  border-radius: 5px;
+  padding-bottom: 6px;
+  padding-top: 2px; }
 
 /*Adding list of foods you can't eat*/
 .section {
@@ -341,6 +336,25 @@ input:focus, textarea:focus {
   text-align: center;
   overflow: hidden; }
 
+.common-restrictions {
+  display: block;
+  width: 55%;
+  margin: 2em auto;
+  margin-bottom: 1em;
+  text-align: center; }
+
+.common-restrictions label {
+  padding: 10px;
+  margin: 0 0 10px;
+  display: inline-block; }
+
+.common-restrictions input[type='checkbox'] {
+  border-radius: 5px;
+  border: solid 1px #ccc; }
+
+.diet {
+  display: inline-block; }
+
 .pref-button {
   cursor: pointer;
   display: inline-block;
@@ -354,8 +368,7 @@ input:focus, textarea:focus {
   margin-left: 5px; }
 
 .dont-like {
-  color: tomato;
-  padding-left: 1px; }
+  color: tomato; }
 
 .dont-like:hover {
   box-shadow: 0 0 10px tomato; }
@@ -369,14 +382,11 @@ input:focus, textarea:focus {
 .cant-eat:hover {
   box-shadow: 0 0 10px red; }
 
-.remove-item {
-  padding-left: 1px; }
-
 .remove-item:hover {
   box-shadow: 0 0 8px black; }
 
 .cant-eat-background {
-  background-color: #ff6666; }
+  background-color: rgba(255, 99, 71, 0.6); }
 
 .search {
   display: block;
@@ -391,15 +401,15 @@ input.search-bar[type=text] {
 input[type=text]:focus {
   border: none; }
 
-input[type=button] {
-  padding: none;
+#add-list {
   text-align: center;
   margin-top: 1em;
-  border: none;
   font-size: 16px;
   padding-bottom: 6px;
   padding-top: 2px;
-  border-radius: 5px; }
+  border-radius: 5px;
+  background: #e5e5e5;
+  border: solid 1px #ccc; }
 
 .tt-dropdown-menu {
   visibility: hidden; }
@@ -413,7 +423,7 @@ input[type=button] {
     float: left;
     display: block;
     margin-right: 2.3576515979%;
-    width: 100%;
+    width: 48.821174201%;
     line-height: 1.6em; }
     .about .content-block:last-child {
       margin-right: 0; }
@@ -557,5 +567,160 @@ input[type=button] {
  }
 
 /*****************************************************************************
-  Module Styles
+  Styles to make responsive/mobile friendly
 ******************************************************************************/
+/*
+Friend section */
+.tabs {
+  position: relative;
+  min-height: 1000px;
+  clear: both;
+  width: 70%;
+  margin: 1em auto; }
+
+.tab {
+  float: left; }
+
+.tab label {
+  font-size: 1.5em;
+  background: #eee;
+  border: 1px solid #ccc;
+  margin-left: -1px;
+  position: relative;
+  left: 1px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  cursor: pointer; }
+
+.tab [type=radio] {
+  display: none; }
+
+.tab-content {
+  position: absolute;
+  top: 34px;
+  left: 0;
+  background: white;
+  right: 0;
+  bottom: 0;
+  padding: 10px;
+  border: 1px solid #ccc; }
+
+[type=radio]:checked ~ label {
+  background: white;
+  border-bottom: 1px solid white;
+  z-index: 2;
+  width: 50%; }
+
+[type=radio]:checked ~ label ~ .tab-content {
+  z-index: 1; }
+
+.friend-list {
+  padding: 0; }
+
+.friend-list img {
+  height: 60px;
+  margin: 1em; }
+
+.friend {
+  display: block;
+  width: 45%;
+  border: solid 1px #ccc;
+  margin-left: 1.5em;
+  margin-bottom: 0.5em;
+  height: 8em;
+  -webkit-transition-property: height;
+  -webkit-transition-duration: 0.2s;
+  -webkit-transition-timing-function: linear; }
+
+.friend-active {
+  height: 15em; }
+
+.friend-info {
+  display: inline-block;
+  position: absolute; }
+
+.friend-info h3 {
+  border-bottom: solid 1px #ccc;
+  width: 20em;
+  padding-bottom: 0.2em;
+  margin-bottom: 0; }
+
+/*Button to include friend and see their preferences*/
+.include-friend {
+  position: relative;
+  margin-left: 258px;
+  margin-bottom: -34px; }
+
+input[type='checkbox'] {
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  background: white;
+  border-radius: 50%;
+  border: 1px solid #555; }
+
+input[type='checkbox']:checked {
+  background: #abd; }
+
+.friend-info p {
+  margin: 0; }
+
+.friend-info p span {
+  color: maroon; }
+
+.friend-food-pref {
+  border: solid 1px #ccc;
+  margin-top: 1em;
+  border-radius: 5px;
+  display: none; }
+
+.friend-food-pref ul {
+  list-style: none;
+  font-size: 1.2em;
+  padding: 0.2em; }
+
+.friend-food-pref ul li {
+  background-color: rgba(255, 99, 71, 0.6);
+  margin-bottom: 0.2em;
+  border-radius: 5px;
+  display: block;
+  box-sizing: content-block; }
+
+.friend-food-pref-total ul {
+  list-style: none;
+  font-size: 1.6em;
+  padding: 0.2em;
+  width: 70%;
+  margin: 1em auto; }
+
+.friend-food-pref-total ul li {
+  background-color: rgba(255, 99, 71, 0.6);
+  margin-bottom: 0.2em;
+  border-radius: 5px;
+  display: block;
+  box-sizing: content-block;
+  padding: 0.5em; }
+
+#picknic-button {
+  text-align: center;
+  display: inline-block;
+  font-size: 1.7em;
+  text-decoration: none;
+  color: black;
+  background-color: #eee;
+  width: 5em;
+  margin-left: 44%;
+  border-radius: 5px;
+  border: solid 1px #ccc; }
+
+/*	Picknic section*/
+body .picknic-page {
+  background-color: #eee; }
+
+.picknic-page h1 {
+  padding-left: 1em;
+  position: relative;
+  top: 0.5em;
+  margin-bottom: 1em; }

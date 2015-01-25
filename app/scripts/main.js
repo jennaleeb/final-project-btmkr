@@ -1,17 +1,18 @@
 // 'use strict';
 
-// Using typeahead plugin
+// for typeahead plugin
 function  matcher (item, query) {
         if (item.toLowerCase().indexOf(query.trim().toLowerCase()) != -1) {
             return true;
         }
     }
 
+
 $(document).ready(function() {
     console.log("Ready!"); 
 
 
-
+// Typeahead plugin function on searchbar for adding food preferences
     $('#typeahead').typeahead({
         hint: true,
         highlight: true,
@@ -25,11 +26,29 @@ $(document).ready(function() {
         map = {};
 
         var data = [
-            {"foodName": "Apples"},
-            {"foodName": "Peaches"},
-            {"foodName": "Plums"},
-            {"foodName": "Nectarines"},
-            {"foodName": "Bananas"}
+            {"foodName": "Apple"},
+            {"foodName": "Peache"},
+            {"foodName": "Plum"},
+            {"foodName": "Nectarine"},
+            {"foodName": "Banana"},
+
+            {"foodName": "Tomato"},
+            {"foodName": "Eggplant"},
+            {"foodName": "Cucumber"},
+            {"foodName": "Carrot"},
+            {"foodName": "Cauliflour"},
+
+            {"foodName": "Chicken"},
+            {"foodName": "Beef"},
+            {"foodName": "Pork"},
+            {"foodName": "Quail"},
+            {"foodName": "Turkey"},
+
+            {"foodName": "Salmon"},
+            {"foodName": "Haddock"},
+            {"foodName": "Sea Bass"},
+            {"foodName": "Lobster"},
+            {"foodName": "Clams"}
         ];
 
         $.each(data, function (i, food) {
@@ -47,7 +66,7 @@ $(document).ready(function() {
     });
 
 
-    var containerheight = 100;
+    var containerheight = 40;
     // Add text in textbox as list of food item
 	$('input[type=button]').on('click', function() {
 	var item = $('.tt-input').val();
@@ -92,10 +111,14 @@ $(document).ready(function() {
 
 	$('.cant-eat-container').on('click', '.remove-item', function() {
 		$(this).closest('.list-of-items').remove();
+        containerheight -= 40;
+        $('.cant-eat-container').height(containerheight);
+        
 	});
 
 	
 
+    // Save your preferences
 
 	$("#save-pref").on('click', function() {
     	swal({
@@ -109,7 +132,12 @@ $(document).ready(function() {
 
 
 
-	
+    
+	// Toggle show/hide friend's food preferences
 
+        $('.include-friend').on('click', function() {
+            $(this).closest(".friend").toggleClass("friend-active");
+            $(this).siblings('.friend-food-pref').fadeToggle(200);
+        });
     
 });
