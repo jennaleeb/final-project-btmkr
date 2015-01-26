@@ -717,10 +717,15 @@ input[type='checkbox']:checked {
 
 /*	Picknic section*/
 body .picknic-page {
-  background-color: #eee; }
+  background-color: #eee;
+  min-height: 50em; }
 
 .picknic-page h1 {
   padding-left: 1em;
   position: relative;
   top: 0.5em;
   margin-bottom: 1em; }
+
+.login {
+  text-align: center;
+  display: none; }

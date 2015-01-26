@@ -893,6 +893,7 @@ Friend section */
 
 body .picknic-page {
 	background-color: #eee;
+	min-height: 50em;
 }
 
 .picknic-page h1 {
@@ -903,3 +904,10 @@ body .picknic-page {
 	margin-bottom: 1em;
 	
 }
+
+.login {
+	text-align: center;
+	display: none;
+
+}
+
