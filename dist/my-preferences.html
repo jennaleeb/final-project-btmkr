@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0;">
+    <title>My Preferences</title>
+
+    <link rel="stylesheet" href="styles/vendor.css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" type="text/css" href="styles/sweet-alert.css">
+    <link rel="stylesheet" type="text/css" href="animate.css">
+
+    
+  </head>
+
+  <body>
+    <div class="">
+
+      <nav class="site-menu">
+        <ul class="list-unstyled">
+          <li><a href="index.html">About</a></li>
+          <li><a href="my-preferences.html">Set Preferences</a></li>
+          <li><a href="friends.html">Friends</a></li>
+          <li><a href="picknic.html">Picknic</a></li>
+          <li><a href="#">Log in</a></li>
+        </ul>
+      </nav>
+
+      <div class="account">
+
+        <img class="account-icon" src="images/my-account.png">
+
+
+        
+        <div class="account-info">
+          <h2>My Account</h2><br><br>
+          <hr width="320">
+          <h3>John Dough</h3>
+          <h4>Member Since: April 24, 2014</h4>
+          <h4>Email Address: john.dough@gmail.com</h4>
+          <hr width="320">
+        </div>
+        
+
+      </div>
+
+      <div class="section cant-eat-section" >
+        <header>Hey <span>John</span>, What Can't You Eat?</header>
+        <h2>Use the searchbar to find and add the foods you aren't willing to put in your mouth. </h2>
+
+
+        <div class="search">
+          <input type="text" id="typeahead" class="search-bar">
+          <input type="button" id="add-list" value="ADD TO LIST">
+        </div>  
+
+        
+        <div >
+          <ul class="cant-eat-container">
+            <!-- <li class="list-of-items" >I'm an Example Food Item!
+              <div class="pref-button remove-item">X</div>
+              <div class="pref-button dont-like">~</div>
+              <div class="pref-button cant-eat">!</div>
+
+            </li> -->
+
+          </ul>
+
+        </div>
+
+        <div class="common-restrictions">
+
+          <h2>Any other dietary restrictions?</h2>
+
+          <label for="Vegetarian">
+            <input id="Vegetarian" name="" type="checkbox"/>
+            Vegetarian
+          </label>
+
+          <label for="Vegan">
+            <input id="Vegan" name="" type="checkbox"/>
+            Vegan
+          </label>
+
+          <label for="Pescetarian">
+            <input id="Pescetarian" name="" type="checkbox"/>
+            Pescetarian
+          </label>
+
+          <label for="Gluten-free">
+            <input id="Gluten-free" name="" type="checkbox"/>
+            Gluten-free
+          </label>
+
+          <label for="Peanut-free">
+            <input id="Peanut-free" name="" type="checkbox"/>
+            Peanut-free
+          </label>
+
+          <label for="Soy-free">
+            <input id="Soy-free" name="" type="checkbox"/>
+            Soy-free
+          </label>
+
+          <label for="Dairy-free">
+            <input id="Dairy-free" name="" type="checkbox"/>
+            Dairy-free
+          </label>
+
+          <label for="Shellfish-free">
+            <input id="Shellfish-free" name="" type="checkbox"/>
+            Shellfish-free
+          </label>
+
+          <label for="Kosher">
+            <input id="Kosher" name="" type="checkbox"/>
+            Kosher
+          </label>
+
+          <label for="Kosher">
+            <input id="Kosher" name="" type="checkbox"/>
+            Halal
+          </label>
+
+        </div>
+
+
+      
+
+      <input type="button" value="Save my preferences" id="save-pref">
+    </div>
+
+
+
+
+    <script src="scripts/main.js"></script>
+  </body>
+</html>
