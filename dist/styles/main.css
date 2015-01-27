@@ -430,6 +430,26 @@ input[type=text]:focus {
 
   .cant-eat-container {
     width: 90%; }
+
+  .tabs {
+    width: 100%; }
+
+  .friend {
+    width: 95%; }
+
+  .tab label {
+    padding-left: 30px;
+    padding-right: 30px; }
+
+  .site-menu {
+    height: 2em; }
+
+  .site-menu ul {
+    padding-top: 0.2em;
+    float: right; }
+
+  .site-menu li {
+    font-size: 1.2em; }
  }
 
 /*Styles used for everything bigger than mobile*/
